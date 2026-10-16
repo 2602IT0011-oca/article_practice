@@ -1,0 +1,37 @@
+<div class="page-container">
+  <h1 class="page-title">投稿詳細</h1>
+
+  <div class="article-detail">
+    <div class="detail-row">
+      <span class="detail-label">ID</span>
+      <p><%= @article.id %></p>
+    </div>
+
+    <div class="detail-row">
+      <span class="detail-label">タイトル</span>
+      <p><%= @article.title %></p>
+    </div>
+
+    <div class="detail-row">
+      <span class="detail-label">投稿内容</span>
+      <p class="article-content"><%= @article.content %></p>
+    </div>
+  </div>
+
+  <div class="page-actions">
+    <%= link_to "編集", edit_article_path(@article),
+                class: "button button-primary" %>
+
+    <%= link_to "一覧に戻る", articles_path,
+                class: "button button-secondary" %>
+
+    <%= button_to "削除", article_path(@article),
+                  method: :delete,
+                  class: "button button-danger",
+                  form: {
+                    data: {
+                      turbo_confirm: "この記事を削除しますか？"
+                    }
+                  } %>
+  </div>
+</div>

@@ -1,0 +1,201 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  color: #333;
+  font-family: Arial, "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+
+.page-container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.page-title {
+  margin: 0 0 25px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #ddd;
+  font-size: 28px;
+}
+
+.page-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.button {
+  display: inline-block;
+  padding: 9px 18px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-primary {
+  background-color: #007bff;
+}
+
+.button-primary:hover {
+  background-color: #0056b3;
+}
+
+.button-secondary {
+  background-color: #6c757d;
+}
+
+.button-secondary:hover {
+  background-color: #545b62;
+}
+
+.button-danger {
+  background-color: #dc3545;
+}
+
+.button-danger:hover {
+  background-color: #bd2130;
+}
+
+.article-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.article-table th,
+.article-table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+.article-table th {
+  background-color: #f0f2f5;
+}
+
+.article-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.article-table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.article-table a:hover {
+  text-decoration: underline;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #80bdff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.article-detail {
+  margin-bottom: 25px;
+}
+
+.detail-row {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+  font-weight: bold;
+}
+
+.article-content {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.flash-message {
+  padding: 12px 15px;
+  margin: 15px 0;
+  border-radius: 4px;
+}
+
+.flash-success {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+.flash-error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.error-messages {
+  margin-bottom: 20px;
+  padding: 15px;
+  color: #721c24;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .page-container {
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+  }
+
+  .page-title {
+    font-size: 23px;
+  }
+
+  .article-table th,
+  .article-table td {
+    padding: 8px;
+  }
+}

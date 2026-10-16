@@ -1,0 +1,9 @@
+<div class="page-container">
+  <h1 class="page-title">新規投稿</h1>
+
+  <%= render "form", article: @article %>
+
+  <div class="page-actions">
+    <%= link_to "一覧に戻る", articles_path, class: "button button-secondary" %>
+  </div>
+</div>

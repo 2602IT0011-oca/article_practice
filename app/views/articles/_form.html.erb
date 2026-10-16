@@ -1,0 +1,27 @@
+<%= form_with model: article do |form| %>
+  <% if article.errors.any? %>
+    <div class="error-messages">
+      <p>入力内容を確認してください。</p>
+      <ul>
+        <% article.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title, "タイトル" %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :content, "投稿内容" %>
+    <%= form.text_area :content, rows: 8, class: "form-control" %>
+  </div>
+
+  <div class="page-actions">
+    <%= form.submit(article.persisted? ? "更新する" : "投稿する",
+                    class: "button button-primary") %>
+  </div>
+<% end %>
